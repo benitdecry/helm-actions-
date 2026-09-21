@@ -1,0 +1,8 @@
+name: "01 understanding contexts"
+on: push
+jobs: 
+    event-info-job: 
+        runs-on: ubuntu-latest 
+        steps:
+         - name: print trigger event 
+           run: echo "My trigger event is ${{github.event_name}}"
