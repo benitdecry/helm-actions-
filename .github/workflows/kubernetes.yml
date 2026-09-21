@@ -1,0 +1,24 @@
+name: Test Kubernetes Connection
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test-kubernetes:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check kubectl
+        run: kubectl version --client
+
+      - name: Check Kubernetes nodes
+        run: kubectl get nodes
+
+      - name: Check Kubernetes pods
+        run: kubectl get pods -A
+
+      - name: Check Helm
+        run: helm version

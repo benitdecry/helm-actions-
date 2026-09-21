@@ -1,0 +1,27 @@
+name: Deploy NGINX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-nginx:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check Kubernetes connection
+        run: kubectl get nodes
+
+      - name: Add NGINX Helm repository
+        run: helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+      - name: Update Helm repositories
+        run: helm repo update
+
+      - name: Deploy NGINX
+        run: helm upgrade --install nginx ingress-nginx/ingress-nginx --namespace nginx --create-namespace
+
+      - name: Check NGINX pods
+        run: kubectl get pods -n nginx
+
+      - name: Check NGINX service
+        run: kubectl get svc -n nginx
