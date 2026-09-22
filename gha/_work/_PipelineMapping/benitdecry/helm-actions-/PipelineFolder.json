@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "benitdecry/helm-actions-",
+  "pipelineDirectory": "helm-actions-",
+  "workspaceDirectory": "helm-actions-\\helm-actions-",
+  "repositories": {
+    "benitdecry/helm-actions-": {
+      "repositoryPath": "helm-actions-\\helm-actions-",
+      "lastRunOn": "09/21/2026 13:16:45 +05:30"
+    }
+  },
+  "lastRunOn": "09/21/2026 19:04:25 +05:30"
+}

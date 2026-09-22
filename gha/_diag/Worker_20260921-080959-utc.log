@@ -1,0 +1,1996 @@
+[2026-09-21 08:09:59Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Runner': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.runner'
+[2026-09-21 08:09:59Z INFO Worker] Version: 2.337.0
+[2026-09-21 08:09:59Z INFO Worker] Commit: 397b032cbf865e9c3ddfab89d533ec19325e1273
+[2026-09-21 08:09:59Z INFO Worker] Culture: en-US
+[2026-09-21 08:09:59Z INFO Worker] UI Culture: en-US
+[2026-09-21 08:09:59Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-09-21 08:09:59Z INFO ProcessChannel] Receiving message of length 23165, with hash '7f1cb6ec0d2fc9575858e6c327ffaeab7c6fb5a8833dc3c8a2b097782736fd9c'
+[2026-09-21 08:09:59Z INFO Worker] Message received.
+[2026-09-21 08:09:59Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/kubernetes.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 14,
+        "col": 15,
+        "lit": "Check kubectl"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 15,
+              "col": 14,
+              "lit": "kubectl version --client"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "e72beb04-aa74-47ac-b11e-fe11989b2866",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 17,
+        "col": 15,
+        "lit": "Check Kubernetes nodes"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 14,
+              "lit": "kubectl get nodes"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "014a4b12-a87c-4e39-b478-8e5f09ef7403",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 20,
+        "col": 15,
+        "lit": "Check Kubernetes pods"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 14,
+              "lit": "kubectl get pods -A"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "ac056fc5-6797-46fe-a32a-2cb39dc6d119",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 23,
+        "col": 15,
+        "lit": "Check Helm"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 14,
+              "lit": "helm version"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "5a680f48-f2f6-4402-8106-10005a247728",
+      "name": "__run_4"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions.runner.requirenode24": {
+      "value": "false"
+    },
+    "actions.runner.usenode24bydefault": {
+      "value": "true"
+    },
+    "actions.runner.warnonnode20": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_batch_action_resolution": {
+      "value": "false"
+    },
+    "actions_cache_mode": {
+      "value": "write"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_runner_allow_artifacts_file": {
+      "value": "false"
+    },
+    "actions_runner_compare_workflow_parser": {
+      "value": "false"
+    },
+    "actions_runner_deprecate_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_emit_composite_markers": {
+      "value": "true"
+    },
+    "actions_runner_kill_linux_arm32": {
+      "value": "false"
+    },
+    "actions_runner_node20_removal_date": {
+      "value": "September 23rd, 2026"
+    },
+    "actions_runner_node24_default_date": {
+      "value": "June 16th, 2026"
+    },
+    "actions_self_repository": {
+      "value": "true"
+    },
+    "actions_service_container_command": {
+      "value": "true"
+    },
+    "actions_set_orchestration_id_env_for_actions": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_snapshot_preflight_hosted_runner_check": {
+      "value": "false"
+    },
+    "actions_snapshot_preflight_image_gen_pool_check": {
+      "value": "false"
+    },
+    "actions_use_bearer_token_for_codeload": {
+      "value": "false"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "test-kubernetes"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "37ab0239-274e-4579-a564-0bae1c968165.test-kubernetes.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "test-kubernetes"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "37ab0239-274e-4579-a564-0bae1c968165",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "37ab0239-274e-4579-a564-0bae1c968165",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "d06199b7-f5d4-5e92-92bd-12557fc3c27a",
+  "jobDisplayName": "test-kubernetes",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/XkcGlEpYmzgbhPIBVOyWcxiKGVBgEltYy7QRSO1xf0JCcMcahN/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/XkcGlEpYmzgbhPIBVOyWcxiKGVBgEltYy7QRSO1xf0JCcMcahN/",
+          "GenerateIdTokenUrl": "",
+          "ConnectivityChecks": "[\"https://broker.actions.githubusercontent.com/health\",\"https://token.actions.githubusercontent.com/ready\",\"https://run.actions.githubusercontent.com/health\"]",
+          "ConnectivityAndDNSChecks": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-2-azure-eastus.actions.githubusercontent.com/167/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+        },
+        {
+          "k": "repository",
+          "v": "benitdecry/helm-actions-"
+        },
+        {
+          "k": "repository_owner",
+          "v": "benitdecry"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "23312652"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/benitdecry/helm-actions-.git"
+        },
+        {
+          "k": "run_id",
+          "v": "35576463641"
+        },
+        {
+          "k": "run_number",
+          "v": "4"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "23312652"
+        },
+        {
+          "k": "actor",
+          "v": "benitdecry"
+        },
+        {
+          "k": "workflow",
+          "v": "Test Kubernetes Connection"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "e78a2659ba9f010c649f02c076d8372032142b93"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "shaikhsalahuddin414@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Shaikh Salahuddin"
+                              },
+                              {
+                                "k": "username",
+                                "v": "benitdecry"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noreply@github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "GitHub"
+                              },
+                              {
+                                "k": "username",
+                                "v": "web-flow"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Create NGINX deployment workflow using Helm\n\nThis workflow deploys NGINX using Helm on a self-hosted runner, including checks for Kubernetes connection and NGINX resources."
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2026-09-21T13:39:52+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "56b92e2f798a5db57f9e126b24c4ab787a1eb9b3"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/benitdecry/helm-actions-/commit/d3a647dd8e30953393cb4ba7e21fd15423302b54"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/benitdecry/helm-actions-/compare/e78a2659ba9f...d3a647dd8e30"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "shaikhsalahuddin414@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Shaikh Salahuddin"
+                          },
+                          {
+                            "k": "username",
+                            "v": "benitdecry"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noreply@github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GitHub"
+                          },
+                          {
+                            "k": "username",
+                            "v": "web-flow"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Create NGINX deployment workflow using Helm\n\nThis workflow deploys NGINX using Helm on a self-hosted runner, including checks for Kubernetes connection and NGINX resources."
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2026-09-21T13:39:52+05:30"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "56b92e2f798a5db57f9e126b24c4ab787a1eb9b3"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/benitdecry/helm-actions-/commit/d3a647dd8e30953393cb4ba7e21fd15423302b54"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "shaikhsalahuddin414@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "benitdecry"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/benitdecry/helm-actions-.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1789969592.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": "installing nginx through helm - cicd"
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "benitdecry/helm-actions-"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/benitdecry/helm-actions-.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pull_requests",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/benitdecry/helm-actions-"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1379156615.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": null
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "helm-actions-"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOUjRChw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/23312652?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "shaikhsalahuddin414@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/benitdecry/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/benitdecry/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/benitdecry/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/benitdecry/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/benitdecry"
+                          },
+                          {
+                            "k": "id",
+                            "v": 23312652.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "benitdecry"
+                          },
+                          {
+                            "k": "name",
+                            "v": "benitdecry"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjIzMzEyNjUy"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/benitdecry/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/benitdecry/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/benitdecry/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/benitdecry/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/benitdecry/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/benitdecry"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pull_request_creation_policy",
+                      "v": "all"
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1789978192.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:benitdecry/helm-actions-.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/benitdecry/helm-actions-"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2026-09-21T07:59:17Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/benitdecry/helm-actions-"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/23312652?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/benitdecry/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/benitdecry/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/benitdecry/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/benitdecry/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/benitdecry"
+                    },
+                    {
+                      "k": "id",
+                      "v": 23312652.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "benitdecry"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjIzMzEyNjUy"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/benitdecry/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/benitdecry/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/benitdecry/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/benitdecry/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/benitdecry/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/benitdecry"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "benitdecry/helm-actions-/.github/workflows/kubernetes.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+        },
+        {
+          "k": "repository_id",
+          "v": "1379156615"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "benitdecry"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 106259314116.0
+        },
+        {
+          "k": "workflow_ref",
+          "v": "benitdecry/helm-actions-/.github/workflows/kubernetes.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "d3a647dd8e30953393cb4ba7e21fd15423302b54"
+        },
+        {
+          "k": "workflow_repository",
+          "v": "benitdecry/helm-actions-"
+        },
+        {
+          "k": "workflow_file_path",
+          "v": ".github/workflows/kubernetes.yml"
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOAWO5DA"
+}
+[2026-09-21 08:09:59Z INFO JobRunner] Job ID d06199b7-f5d4-5e92-92bd-12557fc3c27a
+[2026-09-21 08:09:59Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin\Runner.Worker.dll
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] binPath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] RootFolder: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Runner': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.runner'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] ConfigFilePath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.runner
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.runner_migrated'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.runner_migrated
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] CredFilePath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials_migrated'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials_migrated
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Service': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.service'
+[2026-09-21 08:09:59Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.service
+[2026-09-21 08:09:59Z INFO ConfigurationStore] Read setting file: 392 chars
+[2026-09-21 08:09:59Z INFO JobRunner] Initializing launch client
+[2026-09-21 08:09:59Z INFO JobServerQueue] Initializing results client
+[2026-09-21 08:09:59Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-09-21 08:09:59Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2026-09-21 08:09:59Z INFO JobServerQueue] Start process web console line queue.
+[2026-09-21 08:09:59Z INFO JobServerQueue] Start process file upload queue.
+[2026-09-21 08:09:59Z INFO JobServerQueue] Start results file upload queue.
+[2026-09-21 08:09:59Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-09-21 08:09:59Z INFO JobServerQueue] Start process timeline update queue.
+[2026-09-21 08:09:59Z INFO ExecutionContext] Initializing Job context
+[2026-09-21 08:09:59Z INFO ExecutionContext] Initialize GitHub context
+[2026-09-21 08:09:59Z INFO ExecutionContext] Initialize Env context
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO JobRunner] Starting the job execution context.
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO JobRunner] Validating directory permissions for: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Tools': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_tool'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:09:59Z INFO JobRunner] Getting job extension.
+[2026-09-21 08:09:59Z INFO JobRunner] Initialize job. Getting all job steps.
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.credentials'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\.setup_info'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_PipelineMapping\benitdecry/helm-actions-\PipelineFolder.json
+[2026-09-21 08:09:59Z INFO PipelineDirectoryManager] Updating job run properties.
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO JobExtension] Downloading actions
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_actions'
+[2026-09-21 08:09:59Z INFO JobExtension] Adding .
+[2026-09-21 08:09:59Z INFO JobExtension] Adding .
+[2026-09-21 08:09:59Z INFO JobExtension] Adding .
+[2026-09-21 08:09:59Z INFO JobExtension] Adding .
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:09:59Z INFO JobExtension] Total accessible running process: 351.
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO JobExtension] Start checking server connectivity.
+[2026-09-21 08:09:59Z INFO JobExtension] Check server connectivity for https://broker.actions.githubusercontent.com/health.
+[2026-09-21 08:09:59Z INFO JobExtension] Check server connectivity for https://token.actions.githubusercontent.com/ready.
+[2026-09-21 08:09:59Z INFO JobExtension] Check server connectivity for https://run.actions.githubusercontent.com/health.
+[2026-09-21 08:09:59Z INFO JobExtension] Start checking service connectivity in background.
+[2026-09-21 08:09:59Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "7f30647e-15cc-476f-8135-c672aa85dfe6",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:09:59.7334091Z",
+  "finishTime": "2026-09-21T08:09:59.789529Z"
+}.
+[2026-09-21 08:09:59Z INFO JobRunner] Total job steps: 4.
+[2026-09-21 08:09:59Z INFO JobRunner] Run all job steps.
+[2026-09-21 08:09:59Z INFO DapDebugger] DapDebugger initialized
+[2026-09-21 08:09:59Z INFO StepsRunner] Processing step: DisplayName='Check kubectl'
+[2026-09-21 08:09:59Z INFO StepsRunner] Evaluating: success()
+[2026-09-21 08:09:59Z INFO StepsRunner] Result: true
+[2026-09-21 08:09:59Z INFO StepsRunner] Starting the step.
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO StepsRunner] Which2: 'chcp'
+[2026-09-21 08:09:59Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] Process started with process id 7932, waiting for process exit.
+[2026-09-21 08:09:59Z INFO Worker] Listening for cancel message from the channel.
+[2026-09-21 08:09:59Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] Finished process 7932 with exit code 0, and elapsed time 00:00:00.0102590.
+[2026-09-21 08:09:59Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:09:59Z INFO ExecutionContext] Write event payload to C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_github_workflow\event.json
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:09:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateArtifactsFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ArtifactsListFileCommand, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command error
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command group
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-09-21 08:09:59Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-09-21 08:09:59Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:09:59Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:09:59Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:09:59Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:09:59Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\a8c4ba82-315a-4ee8-acdf-c8361c708a09.ps1'"'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\helm-actions-\helm-actions-'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:09:59Z INFO ProcessInvokerWrapper] Process started with process id 24912, waiting for process exit.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Finished process 24912 with exit code 0, and elapsed time 00:00:00.4408891.
+[2026-09-21 08:10:00Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_runner_file_commands\step_summary_d5584dba-414d-4dac-ad28-4910deab51c0) is empty; skipping attachment upload
+[2026-09-21 08:10:00Z INFO StepsRunner] Step result: 
+[2026-09-21 08:10:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "e72beb04-aa74-47ac-b11e-fe11989b2866",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:09:59.7967925Z",
+  "finishTime": "2026-09-21T08:10:00.3010563Z"
+}.
+[2026-09-21 08:10:00Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-09-21 08:10:00Z INFO StepsRunner] Current state: job state = ''
+[2026-09-21 08:10:00Z INFO StepsRunner] Processing step: DisplayName='Check Kubernetes nodes'
+[2026-09-21 08:10:00Z INFO StepsRunner] Evaluating: success()
+[2026-09-21 08:10:00Z INFO StepsRunner] Result: true
+[2026-09-21 08:10:00Z INFO StepsRunner] Starting the step.
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO StepsRunner] Which2: 'chcp'
+[2026-09-21 08:10:00Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Process started with process id 20932, waiting for process exit.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Finished process 20932 with exit code 0, and elapsed time 00:00:00.0084603.
+[2026-09-21 08:10:00Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ExecutionContext] Write event payload to C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_github_workflow\event.json
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-09-21 08:10:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command error
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command group
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-09-21 08:10:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\f22384d1-82ff-4f88-a113-0a3555b584b6.ps1'"'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\helm-actions-\helm-actions-'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Process started with process id 22044, waiting for process exit.
+[2026-09-21 08:10:00Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:00Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_7f30647e-15cc-476f-8135-c672aa85dfe6.1
+[2026-09-21 08:10:00Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Finished process 22044 with exit code 0, and elapsed time 00:00:00.5194712.
+[2026-09-21 08:10:00Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_runner_file_commands\step_summary_bddb4b61-5323-433d-82ff-d5cd944112b1) is empty; skipping attachment upload
+[2026-09-21 08:10:00Z INFO StepsRunner] Step result: 
+[2026-09-21 08:10:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "014a4b12-a87c-4e39-b478-8e5f09ef7403",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:10:00.3028335Z",
+  "finishTime": "2026-09-21T08:10:00.8501895Z"
+}.
+[2026-09-21 08:10:00Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-09-21 08:10:00Z INFO StepsRunner] Current state: job state = ''
+[2026-09-21 08:10:00Z INFO StepsRunner] Processing step: DisplayName='Check Kubernetes pods'
+[2026-09-21 08:10:00Z INFO StepsRunner] Evaluating: success()
+[2026-09-21 08:10:00Z INFO StepsRunner] Result: true
+[2026-09-21 08:10:00Z INFO StepsRunner] Starting the step.
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO StepsRunner] Which2: 'chcp'
+[2026-09-21 08:10:00Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Process started with process id 28172, waiting for process exit.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Finished process 28172 with exit code 0, and elapsed time 00:00:00.0117725.
+[2026-09-21 08:10:00Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ExecutionContext] Write event payload to C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_github_workflow\event.json
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-09-21 08:10:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command error
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command group
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-09-21 08:10:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-09-21 08:10:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:00Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\e88d4a49-e107-4f27-8519-ac62c9223c63.ps1'"'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\helm-actions-\helm-actions-'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:00Z INFO ProcessInvokerWrapper] Process started with process id 4248, waiting for process exit.
+[2026-09-21 08:10:00Z INFO ResultServer] Successfully started websocket client.
+[2026-09-21 08:10:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7f30647e-15cc-476f-8135-c672aa85dfe6', success rate: 1/1.
+[2026-09-21 08:10:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e72beb04-aa74-47ac-b11e-fe11989b2866', success rate: 1/1.
+[2026-09-21 08:10:00Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e72beb04-aa74-47ac-b11e-fe11989b2866', success rate: 1/1.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '014a4b12-a87c-4e39-b478-8e5f09ef7403', success rate: 1/1.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ac056fc5-6797-46fe-a32a-2cb39dc6d119', success rate: 1/1.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Finished process 4248 with exit code 0, and elapsed time 00:00:00.5187930.
+[2026-09-21 08:10:01Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_runner_file_commands\step_summary_a5ebee5d-cc45-4b29-b6f8-8d9a7d8ffc36) is empty; skipping attachment upload
+[2026-09-21 08:10:01Z INFO StepsRunner] Step result: 
+[2026-09-21 08:10:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "ac056fc5-6797-46fe-a32a-2cb39dc6d119",
+  "stepContextName": "__run_3",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:10:00.8513301Z",
+  "finishTime": "2026-09-21T08:10:01.4093967Z"
+}.
+[2026-09-21 08:10:01Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-09-21 08:10:01Z INFO StepsRunner] Current state: job state = ''
+[2026-09-21 08:10:01Z INFO StepsRunner] Processing step: DisplayName='Check Helm'
+[2026-09-21 08:10:01Z INFO StepsRunner] Evaluating: success()
+[2026-09-21 08:10:01Z INFO StepsRunner] Result: true
+[2026-09-21 08:10:01Z INFO StepsRunner] Starting the step.
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:01Z INFO StepsRunner] Which2: 'chcp'
+[2026-09-21 08:10:01Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Process started with process id 20996, waiting for process exit.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Finished process 20996 with exit code 0, and elapsed time 00:00:00.0091725.
+[2026-09-21 08:10:01Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:01Z INFO ExecutionContext] Write event payload to C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_github_workflow\event.json
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:01Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-09-21 08:10:01Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command error
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command group
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-09-21 08:10:01Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-09-21 08:10:01Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:01Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Temp': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp'
+[2026-09-21 08:10:01Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-09-21 08:10:01Z INFO ScriptHandler] Location: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Starting process:
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files\PowerShell\7\pwsh.EXE'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\1d5654f7-e68e-4c8e-b7be-27c8e67579e8.ps1'"'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\helm-actions-\helm-actions-'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ac056fc5-6797-46fe-a32a-2cb39dc6d119', success rate: 1/1.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5a680f48-f2f6-4402-8106-10005a247728', success rate: 1/1.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Process started with process id 24096, waiting for process exit.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-09-21 08:10:01Z INFO ProcessInvokerWrapper] Finished process 24096 with exit code 0, and elapsed time 00:00:00.4569217.
+[2026-09-21 08:10:01Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp\_runner_file_commands\step_summary_3176b6dc-1a9b-475a-b9d2-e92b44e133d6) is empty; skipping attachment upload
+[2026-09-21 08:10:01Z INFO StepsRunner] Step result: 
+[2026-09-21 08:10:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "5a680f48-f2f6-4402-8106-10005a247728",
+  "stepContextName": "__run_4",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:10:01.4109231Z",
+  "finishTime": "2026-09-21T08:10:01.9006502Z"
+}.
+[2026-09-21 08:10:01Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-09-21 08:10:01Z INFO StepsRunner] Current state: job state = ''
+[2026-09-21 08:10:01Z INFO JobRunner] Finalize job.
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:01Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:10:01Z INFO JobExtension] Initialize Env context
+[2026-09-21 08:10:01Z INFO JobExtension] Initialize steps context
+[2026-09-21 08:10:01Z INFO JobExtension] Total accessible running process: 353.
+[2026-09-21 08:10:01Z INFO JobExtension] Inspecting process environment variables. PID: 25000 (SearchProtocolHost)
+[2026-09-21 08:10:01Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2026-09-21 08:10:01Z INFO JobExtension] Inspecting process environment variables. PID: 19532 (dllhost)
+[2026-09-21 08:10:01Z INFO JobExtension] Wait for all connectivity checks to finish.
+[2026-09-21 08:10:01Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://broker.actions.githubusercontent.com/health",
+  "endpointIPs": null,
+  "startTime": "2026-09-21T08:09:59.7812649Z",
+  "statusCode": "http_OK",
+  "requestId": "D3D6:3BB185:EF1102:F86451:6AB0E658",
+  "httpRequestDurationInMs": 767,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-09-21 08:10:01Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://token.actions.githubusercontent.com/ready",
+  "endpointIPs": null,
+  "startTime": "2026-09-21T08:09:59.7873228Z",
+  "statusCode": "http_NoContent",
+  "requestId": "D3D7:8E93B:BA69B6:D3759E:6AB0E658",
+  "httpRequestDurationInMs": 1121,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-09-21 08:10:01Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://run.actions.githubusercontent.com/health",
+  "endpointIPs": null,
+  "startTime": "2026-09-21T08:09:59.7876568Z",
+  "statusCode": "http_OK",
+  "requestId": "D3D8:3B6932:F2AE90:FC04A9:6AB0E658",
+  "httpRequestDurationInMs": 755,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-09-21 08:10:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "7bbe1fb5-c16c-4c14-957e-b5dbba0b2678",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-09-21T08:10:01.9071835Z",
+  "finishTime": "2026-09-21T08:10:01.9498776Z"
+}.
+[2026-09-21 08:10:01Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2026-09-21 08:10:01Z INFO JobRunner] Completing the job execution context.
+[2026-09-21 08:10:01Z INFO JobRunner] Shutting down the job server queue.
+[2026-09-21 08:10:01Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2026-09-21 08:10:02Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:02Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_e72beb04-aa74-47ac-b11e-fe11989b2866.1
+[2026-09-21 08:10:03Z INFO JobServerQueue] Tried to upload 2 file(s) to results, success rate: 2/2.
+[2026-09-21 08:10:04Z INFO JobServerQueue] All queue process task stopped.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5a680f48-f2f6-4402-8106-10005a247728', success rate: 1/1.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7bbe1fb5-c16c-4c14-957e-b5dbba0b2678', success rate: 1/1.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Web console line queue drained.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2026-09-21 08:10:04Z INFO JobServerQueue] File upload queue drained.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-09-21 08:10:04Z INFO JobServerQueue] Uploading 5 file(s) in one shot through results service.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_014a4b12-a87c-4e39-b478-8e5f09ef7403.1
+[2026-09-21 08:10:04Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:04Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_ac056fc5-6797-46fe-a32a-2cb39dc6d119.1
+[2026-09-21 08:10:05Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:05Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_5a680f48-f2f6-4402-8106-10005a247728.1
+[2026-09-21 08:10:06Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-09-21 08:10:06Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_7bbe1fb5-c16c-4c14-957e-b5dbba0b2678.1
+[2026-09-21 08:10:07Z INFO JobServerQueue] Got a job log file to send to results service.
+[2026-09-21 08:10:07Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\blocks\37ab0239-274e-4579-a564-0bae1c968165_d06199b7-f5d4-5e92-92bd-12557fc3c27a.1
+[2026-09-21 08:10:08Z INFO JobServerQueue] Tried to upload 5 file(s) to results, success rate: 5/5.
+[2026-09-21 08:10:08Z INFO JobServerQueue] Results upload queue drained.
+[2026-09-21 08:10:08Z INFO JobServerQueue] Timeline update queue drained.
+[2026-09-21 08:10:08Z INFO JobServerQueue] Disposing job server ...
+[2026-09-21 08:10:08Z INFO JobServerQueue] Disposing results server ...
+[2026-09-21 08:10:08Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2026-09-21 08:10:08Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_work\_temp
+[2026-09-21 08:10:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\bin'
+[2026-09-21 08:10:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha'
+[2026-09-21 08:10:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag'
+[2026-09-21 08:10:08Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\SHAIKH SALAHUDDIN\OneDrive - Noventiq Global AI Solutions Private Limited\Desktop\app service\gha\_diag\.telemetry'
+[2026-09-21 08:10:08Z INFO JobRunner] Raising job completed against run service
+[2026-09-21 08:10:09Z INFO Worker] Job completed.
